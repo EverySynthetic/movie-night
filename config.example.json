@@ -1,0 +1,13 @@
+{
+  "host_name": "Sam",
+  "vision": { "host": "http://localhost:11434", "model": "qwen2.5vl:7b" },
+  "screenshot_cmd": "spectacle -b -n -f -o {out}",
+  "screen_regions": [
+    { "x": 0, "y": 0, "w": 1920, "h": 1080 }
+  ],
+  "guests": {
+    "guest-one": { "host": "http://localhost:11434", "model": "gemma3:12b" },
+    "guest-two": { "host": "http://localhost:11434", "model": "qwen3:8b", "system": "You are dry-witted and brief." },
+    "heavy-guest": { "host": "http://other-box:11434", "model": "a-22gb-model", "evict_cmd": "ssh other-box 'ollama stop a-22gb-model'" }
+  }
+}
